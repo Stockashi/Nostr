@@ -59,6 +59,11 @@ main > .tagline {
 	padding: 10px;
 }
 
+.icons-social span {
+	display:block;
+}
+
+
 .icons-social a {
   text-decoration: none;
 }
