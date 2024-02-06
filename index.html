@@ -15,6 +15,28 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/themes/white-blue.css">
+    <style>
+        /* Bitcoin Price Widget Styling */
+        .bitcoin-price-widget {
+            background-color: #f2a900;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 10px 20px;
+            margin: 20px auto;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            max-width: 300px;
+        }
+
+        .bitcoin-price-widget span {
+            display: block;
+            font-size: 14px;
+            color: #000;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -27,7 +49,7 @@
             <a target="_blank" href="https://twitter.com/klebtrades"><i class='fab fa-twitter' style='color:grey'><span>Kleb</span></i></a>
         </div>
         <!-- Bitcoin Price Widget -->
-        <div id="bitcoin-price" class="bitcoin-price">Loading Bitcoin price...</div>
+        <div id="bitcoin-price" class="bitcoin-price-widget">Loading Bitcoin price...</div>
     </main>
 
     <script>
@@ -40,7 +62,7 @@
                 .then(function (data) {
                     // handle success
                     var price = data.data.amount;
-                    document.getElementById('bitcoin-price').textContent = 'Bitcoin Price: $' + price;
+                    document.getElementById('bitcoin-price').innerHTML = 'BTC/USD: $' + price + '<span>Updated live</span>';
                 })
                 .catch(function (error) {
                     // handle error
