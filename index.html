@@ -62,7 +62,7 @@
                 .then(function (data) {
                     // handle success
                     var price = data.data.amount;
-                    document.getElementById('bitcoin-price').innerHTML = 'BTC/USD: $' + price + '<span>Updated live</span>';
+                    document.getElementById('bitcoin-price').innerHTML = 'BTC/USD: $' + price + '<span>Updated on refresh</span>';
                 })
                 .catch(function (error) {
                     // handle error
