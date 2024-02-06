@@ -15,14 +15,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/themes/white-blue.css">
-    <!-- Adding Axios for easy HTTP requests -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <main>
         <div class="intro">.886 | Capital Focus</div>
         <div class="tagline">Equities | Crypto | Uranium | Capital</div>
-        <!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
         <div class="icons-social text-center">
             <a target="_blank" href="https://twitter.com/stockashi"><i class='fab fa-twitter'><span>Stockashi</span></i></a>
             <a target="_blank" href="https://twitter.com/AVWAPS"><i class='fab fa-twitter' style='color:grey'><span>AVWAPS</span></i></a>
@@ -34,12 +31,15 @@
     </main>
 
     <script>
-        // Fetch Bitcoin price and update the widget
+        // Fetch Bitcoin price from Coinbase API and update the widget
         function fetchBitcoinPrice() {
-            axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
+            fetch('https://api.coinbase.com/v2/prices/spot?currency=USD')
                 .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
                     // handle success
-                    var price = response.data.bitcoin.usd;
+                    var price = data.data.amount;
                     document.getElementById('bitcoin-price').textContent = 'Bitcoin Price: $' + price;
                 })
                 .catch(function (error) {
