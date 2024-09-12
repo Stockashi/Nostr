@@ -1,5 +1,5 @@
 function countdownTimer() {
-    const targetDate = new Date("Dec 31, 2024 23:59:59").getTime();
+    const targetDate = new Date("Nov 20, 2024 23:59:59").getTime();
 
     const interval = setInterval(function() {
         const now = new Date().getTime();
