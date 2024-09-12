@@ -13,11 +13,14 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    text-align: center; /* Ensure content is centered */
     flex-direction: column;
 }
 
 .container {
-    text-align: center;
+    width: 100%;
+    max-width: 800px; /* Control max width for centering */
+    text-align: center; /* Center-align text in container */
 }
 
 h1 {
@@ -25,6 +28,8 @@ h1 {
     margin-bottom: 30px;
     color: #f7f7f7;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2; /* Ensure spacing between lines is proportional */
+    word-break: break-word; /* Break long words if necessary */
 }
 
 #countdown {
@@ -33,6 +38,7 @@ h1 {
     gap: 20px;
     width: 100%;
     max-width: 800px;
+    margin: 0 auto; /* Ensure the countdown is centered */
 }
 
 .countdown-item {
