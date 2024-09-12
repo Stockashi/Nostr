@@ -13,23 +13,23 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    text-align: center; /* Ensure content is centered */
+    text-align: center;
     flex-direction: column;
+    padding: 20px;
 }
 
 .container {
     width: 100%;
-    max-width: 800px; /* Control max width for centering */
-    text-align: center; /* Center-align text in container */
+    max-width: 800px;
+    padding: 20px; /* Give space for mobile responsiveness */
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 2rem; /* Smaller font size for mobile */
     margin-bottom: 30px;
     color: #f7f7f7;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    line-height: 1.2; /* Ensure spacing between lines is proportional */
-    word-break: break-word; /* Break long words if necessary */
+    line-height: 1.3;
 }
 
 #countdown {
@@ -38,7 +38,8 @@ h1 {
     gap: 20px;
     width: 100%;
     max-width: 800px;
-    margin: 0 auto; /* Ensure the countdown is centered */
+    margin: 0 auto 30px;
+    flex-wrap: wrap; /* Stack items on smaller screens */
 }
 
 .countdown-item {
@@ -49,14 +50,15 @@ h1 {
     text-align: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Space between stacked items */
 }
 
 .countdown-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .countdown-item span {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Slightly smaller for better mobile scaling */
     display: block;
     font-weight: bold;
     color: #ffcc00;
@@ -64,17 +66,18 @@ h1 {
 
 .countdown-item p {
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #ffffff;
     letter-spacing: 1px;
 }
 
 .skeleton-container {
     margin-top: 30px;
+    text-align: center;
 }
 
 .skeleton-gif {
-    max-width: 300px;
+    max-width: 250px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
@@ -87,17 +90,17 @@ h1 {
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem; /* Even smaller for mobile */
     }
     #countdown {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
     .countdown-item {
         width: 100%;
-        max-width: 250px;
+        max-width: 300px; /* Make the countdown blocks wider on mobile */
     }
     .skeleton-gif {
-        max-width: 200px;
+        max-width: 180px; /* Resize the GIF for mobile */
     }
 }
