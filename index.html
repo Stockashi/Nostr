@@ -1,38 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Countdown to Launch</h1>
-        <div id="countdown">
-            <div class="countdown-item">
-                <span id="days">00</span>
-                <p>Days</p>
-            </div>
-            <div class="countdown-item">
-                <span id="hours">00</span>
-                <p>Hours</p>
-            </div>
-            <div class="countdown-item">
-                <span id="minutes">00</span>
-                <p>Minutes</p>
-            </div>
-            <div class="countdown-item">
-                <span id="seconds">00</span>
-                <p>Seconds</p>
-            </div>
-        </div>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <!-- Skeleton GIF -->
-        <div class="skeleton-container">
-            <img src="skeleton.gif" alt="Dancing Skeleton" class="skeleton-gif">
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center; /* Ensure content is centered */
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px; /* Control max width for centering */
+    text-align: center; /* Center-align text in container */
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: #f7f7f7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2; /* Ensure spacing between lines is proportional */
+    word-break: break-word; /* Break long words if necessary */
+}
+
+#countdown {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Ensure the countdown is centered */
+}
+
+.countdown-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.countdown-item:hover {
+    transform: scale(1.1);
+}
+
+.countdown-item span {
+    font-size: 3rem;
+    display: block;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.countdown-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.skeleton-container {
+    margin-top: 30px;
+}
+
+.skeleton-gif {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.skeleton-gif:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    #countdown {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .countdown-item {
+        width: 100%;
+        max-width: 250px;
+    }
+    .skeleton-gif {
+        max-width: 200px;
+    }
+}
