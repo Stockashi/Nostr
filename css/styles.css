@@ -1,11 +1,17 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #282c34;
     color: white;
 }
 
@@ -14,26 +20,58 @@ body {
 }
 
 h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: #f7f7f7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #countdown {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
+    width: 100%;
+    max-width: 800px;
 }
 
-#countdown div {
-    font-size: 2em;
-    padding: 10px;
-    background-color: #444;
-    border-radius: 10px;
-    width: 120px;
+.countdown-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-span {
-    font-weight: bold;
+.countdown-item:hover {
+    transform: scale(1.1);
+}
+
+.countdown-item span {
+    font-size: 3rem;
     display: block;
-    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.countdown-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    #countdown {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .countdown-item {
+        width: 100%;
+        max-width: 250px;
+    }
 }
