@@ -1,5 +1,5 @@
 function countdownTimer() {
-    const targetDate = new Date("Sep 13, 2024 12:59:59").getTime();
+    const targetDate = new Date("Dec 31, 2024 23:59:59").getTime();
 
     const interval = setInterval(function() {
         const now = new Date().getTime();
@@ -17,7 +17,7 @@ function countdownTimer() {
 
         if (distance < 0) {
             clearInterval(interval);
-            document.getElementById("countdown").innerHTML = "The countdown has ended!";
+            document.getElementById("countdown").innerHTML = "<h2>The countdown has ended!</h2>";
         }
     }, 1000);
 }
