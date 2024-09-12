@@ -1,81 +1,39 @@
-/* Typography */
-
-html {
-	font-family: 'Roboto', sans-serif;
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    color: white;
 }
 
-@media (min-width: 576px) {
-	html {
-		font-size: 14px;
-	}
+.container {
+    text-align: center;
 }
 
-@media (min-width: 768px) {
-	html {
-		font-size: 16px;
-	}
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
-@media (min-width: 992px) {
-	html {
-		font-size: 18px;
-	}
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-@media (min-width: 1200px) {
-	html {
-		font-size: 20px;
-	}
+#countdown div {
+    font-size: 2em;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 10px;
+    width: 120px;
 }
 
-.icons-social i {
-	font-size: 3em;
-}
-
-/* Custom Styles */
-
-main {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	justify-content: center;
-	padding: 0 30px;
-	text-align: center;
-}
-
-main > .intro {
-	font-family: 'Reem Kufi', sans-serif;
-	font-size: 3.75em;
-	font-weight: 600;
-}
-
-main > .tagline {
-	font-size: 1.5rem;
-	margin: 1.5rem 0;
-	font-weight: 100;
-}
-
-.icons-social i {
-	padding: 10px;
-}
-
-.icons-social span {
-	display:block;
-	font-size: 1.0rem;
-}
-
-
-.icons-social a {
-  text-decoration: none;
-}
-
-.devto {
-	margin-bottom: -0.20rem;
-}
-
-.devto svg {
-	margin-bottom: -0.20rem;
-	margin-left: 0.675rem;;
-	width: 2.65rem;
-	height: 2.65rem;
+span {
+    font-weight: bold;
+    display: block;
+    font-size: 1.5em;
 }
