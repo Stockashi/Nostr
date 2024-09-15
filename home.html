@@ -1,34 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+
+    <!-- Embed the CSS specific to this page -->
+    <style>
+        body {
+            background-image: url('grid.jpg');
+            color: lime;
+            font-family: "Bitwise";
+            text-shadow: 0 0 3px lime;
+        }
+
+        .background {
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-size: normal;
+            -webkit-animation: scrolly 15s linear infinite;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation: scrolly 15s linear infinite;
+            -moz-animation-fill-mode: forwards;
+            animation: scrolly 15s linear infinite;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes scrolly {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 400px 400px;
+            }
+        }
+
+        @keyframes scrolly {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 400px 400px;
+            }
+        }
+
+        .lain {
+            position: fixed;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            /* This will perfectly center it horizontally */
+            height: 100%;
+            transition: 1s;
+        }
+
+
+        .lain:hover {
+            -webkit-filter: sepia(50%) drop-shadow(35px 30px 3px green) drop-shadow(-1px -1px 0 lime);
+            cursor: auto;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <h1>.886 ignoring me</h1>
-        <h1>Vow of silence until:</h1>
-        <div id="countdown">
-            <div class="countdown-item">
-                <span id="days">00</span>
-                <p>Days</p>
-            </div>
-            <div class="countdown-item">
-                <span id="hours">00</span>
-                <p>Hours</p>
-            </div>
-            <div class="countdown-item">
-                <span id="minutes">00</span>
-                <p>Minutes</p>
-            </div>
-            <div class="countdown-item">
-                <span id="seconds">00</span>
-                <p>Seconds</p>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+<body class="background">
+    <img src="greenlain.png" class="lain" draggable="false">
 </body>
+
 </html>
